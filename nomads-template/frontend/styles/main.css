@@ -1,0 +1,89 @@
+body {
+  background-color: #e4e6eb;
+  font-family: "Assistant", sans-serif;
+  color: #071c4d;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+}
+
+.navbar-nav .nav-link {
+  color: #071c4d;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 600;
+}
+
+.btn-login {
+  background-color: #071c4d;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #0e348d;
+  color: #fff;
+}
+
+.btn-navbar-right {
+  margin: -8px -16px -8px !important;
+  width: 130px;
+  height: 70px;
+  border-radius: 0;
+}
+
+.jumbotron {
+  background-image: url(/frontend/images/header.jpg);
+  background-size: cover;
+  height: 665px;
+  margin-top: -70px;
+}
+
+.jumbotron .container {
+  margin-top: 100px;
+  text-align: center;
+  color: #fff;
+}
+
+.jumbotron .container .display-4 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+}
+
+.jumbotron .container .lead {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.btn-primary {
+  background-color: #ff9543;
+  border-color: #ff9543;
+  height: 45px;
+  width: 170px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #ff9e53;
+  border-color: #ff9e53;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 20px;
+  }
+  .btn-login {
+    font-size: 20px;
+  }
+  .jumbotron .container .display-4 {
+    font-size: 50px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

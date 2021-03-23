@@ -1,0 +1,101 @@
+body {
+  background-color: #e4e6eb;
+  font-family: "Assistant", sans-serif;
+  color: #071c4d;
+}
+
+// Navbar
+.navbar-brand {
+  img {
+    max-height: 40px;
+  }
+}
+
+.navbar-nav {
+  .nav-link {
+    color: #071c4d;
+    font-weight: 300;
+    font-size: 18px;
+    &.active {
+      font-weight: 600;
+    }
+  }
+}
+
+.btn-login {
+  background-color: #071c4d;
+  font-size: 18px;
+  color: #fff;
+
+  &:hover {
+    background-color: #0e348d;
+    color: #fff;
+  }
+}
+
+.btn-navbar-right {
+  margin: -8px -16px -8px !important;
+  width: 130px;
+  height: 70px;
+  border-radius: 0;
+}
+
+// Jumbotron
+.jumbotron {
+  background-image: url(/frontend/images/header.jpg);
+  background-size: cover;
+  height: 665px;
+  margin-top: -70px;
+  .container {
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+    .display-4 {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: "Playfair Display", serif;
+    }
+    .lead {
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+// utilites
+.btn-primary {
+  background-color: #ff9543;
+  border-color: #ff9543;
+  height: 45px;
+  width: 170px;
+
+  font-size: 20px;
+  font-weight: 600;
+  &:hover {
+    background-color: #ff9e53;
+    border-color: #ff9e53;
+  }
+}
+
+@media (min-width: 768px) {
+  // Navbar
+  .navbar-nav {
+    .nav-link {
+      font-size: 20px;
+    }
+  }
+
+  .btn-login {
+    font-size: 20px;
+  }
+
+  //   Jumbotron
+  .jumbotron {
+    .container {
+      .display-4 {
+        font-size: 50px;
+      }
+    }
+  }
+}

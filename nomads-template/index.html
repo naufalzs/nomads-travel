@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NOMADS</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="frontend/libraries/boostrap/css/bootstrap.css"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="/frontend/styles/main.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a href="#" class="navbar-brand">
+          <img src="/frontend/images/logo_nomads.png" alt="logo NOMADS"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigasi">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item mx-md-2">
+              <a href="#" class="nav-link active"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item mx-md-2">
+              <a href="#" class="nav-link">Paket Travel</a>
+            </li>
+            <li class="nav-item mx-md-2 dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navigasi"
+                data-toggle="dropdown"
+              >
+                Services
+              </a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Passport</a>
+                <a href="#" class="dropdown-item">Visa</a>
+              </div>
+            </li>
+            <li class="nav-item mx-md-2">
+              <a href="#" class="nav-link">Testimonial</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Button -->
+          <form class="form-inline d-sm-block d-md-none">
+            <button class="btn btn-login my-2 my-sm-0">Masuk</button>
+          </form>
+
+          <!-- Desktop Button -->
+          <form class="form-inline my-2 my-lg-0 d-none d-md-block">
+            <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+              Masuk
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 mx-4">
+              Explore the Beautiful World as Easy One Click
+            </h1>
+            <p class="lead">
+              You will see beautiful <br />
+              moment that you never see before
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="frontend/libraries/jquery/jquery-3.6.0.min.js"></script>
+    <script src="frontend/libraries/boostrap/js/bootstrap.js"></script>
+    <script src="/frontend//libraries//retina/retina.min.js"></script>
+  </body>
+</html>
