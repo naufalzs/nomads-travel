@@ -272,7 +272,7 @@ body {
     h2 {
       font-weight: 600;
     }
-    
+
     h1 {
       text-align: center;
       font-size: 26px;
@@ -287,7 +287,7 @@ body {
       font-size: 18px;
       font-weight: 300;
       color: #b1b1b1;
-      &.location{
+      &.location {
         text-align: center;
       }
     }
@@ -347,40 +347,220 @@ body {
     }
   }
 
-  .card-trip-info{
+  .card-trip-info {
     border-radius: 11px;
-    h1{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    h1 {
       text-align: center;
       font-size: 20px;
       font-weight: 600;
     }
 
-    .member-going{
+    .member-going {
       text-align: center;
       img {
         margin: 5px 8px 5px 0;
       }
     }
 
-    hr{
+    hr {
       margin: 20px 0;
     }
 
-    p{
-      font-size: 18px;
-      font-weight: 300;
-      span{
-        float: right;
+    .trip-information {
+      th {
+        font-size: 18px;
+        font-weight: 300;
+      }
+      td {
+        font-size: 18px;
         color: #b1b1b1;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .btn-container {
+    margin: 0;
+    .btn-join {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+}
+
+// CHECKOUT PAGE TEMPLATE
+.section-checkout-content {
+  margin-top: 10px;
+  min-height: 100vh;
+  .card-checkout {
+    border-radius: 11px;
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 26px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+
+    p {
+      color: #b1b1b1;
+      font-weight: 300;
+      font-size: 18px;
+      &.disclaimer {
+        font-weight: 400;
+        font-size: 14px;
       }
     }
 
-    .btn-container{
-      margin: 15px -24px -24px;
-      .btn-primary{
-        border-radius: 0;
-        width: 100%;
+    .attendee {
+      th,
+      td {
+        color: #071c4d;
+        font-size: 18px;
       }
+      th {
+        font-weight: 300;
+        border-top: 0;
+      }
+    }
+    .add-member {
+      .gj-datepicker {
+        .datepicker {
+          border-right: 0;
+        }
+        .input-group-append {
+          .btn {
+            padding: 0;
+            padding-bottom: 5px;
+          }
+        }
+      }
+      .btn-add-now {
+        width: 130px;
+        border-color: #071c4d;
+        background-color: #071c4d;
+        &:hover {
+          background-color: #0c2b72;
+          border-color: #0c2b72;
+        }
+      }
+    }
+  }
+  .card-checkout-info {
+    border-radius: 11px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    h1 {
+      text-align: left;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    .checkout-information {
+      th {
+        font-size: 16px;
+        font-weight: 300;
+      }
+      td {
+        font-size: 18px;
+        color: #b1b1b1;
+        font-weight: 300;
+      }
+      .total {
+        color: #071c4d;
+        font-weight: 600;
+        span {
+          color: #da4e4e;
+        }
+      }
+    }
+
+    .instruction-note {
+      font-size: 14px;
+      font-weight: 300;
+      color: #b1b1b1;
+    }
+
+    .bank {
+      .bank-item {
+        h3,
+        p {
+          font-size: 16px;
+        }
+        h3 {
+          font-weight: 300;
+          margin-bottom: 0;
+        }
+        p {
+          margin-bottom: 0;
+        }
+
+        .description {
+          margin-left: 10px;
+          overflow: hidden;
+          float: left;
+        }
+
+        .bank-img {
+          float: left;
+        }
+      }
+    }
+  }
+  .btn-container {
+    color: #071c4d;
+    margin: 0;
+    .btn-payment {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+  .btn-cancel-container{
+    margin-top: 20px;
+    .btn-cancel{
+      font-size: 20px;
+      font-weight: 300;
+      color: #b1b1b1;
+    }
+  }
+}
+
+// SUCCESS PAGE TEMPLATE
+.section-success-content{
+  height: 90vh;
+  .img-success{
+    margin-top: 100px;
+  }
+  h1{
+    font-size: 26px;
+    font-weight: 600;
+  }
+  p{
+    font-size: 18px;
+    font-weight: 300;
+    color: #b1b1b1;
+  }
+  
+  .btn-backhome {
+    margin-top: 35px;
+    border-color: #071c4d;
+    background-color: #071c4d;
+    &:hover {
+      background-color: #0c2b72;
+      border-color: #0c2b72;
     }
   }
 }
@@ -397,6 +577,10 @@ body {
   &:hover {
     background-color: #ffa25c;
     border-color: #ffa25c;
+  }
+  &:active{
+    background-color: #ffa25c !important;
+    border-color: #ffa25c !important;
   }
 }
 
@@ -525,10 +709,11 @@ body {
 
   .section-details-content {
     .card-details {
-      h1,p{
+      h1,
+      p {
         text-align: left;
-        &.location{
-        text-align: left;
+        &.location {
+          text-align: left;
         }
       }
       .gallery {
@@ -546,11 +731,11 @@ body {
         }
       }
     }
-    .card-trip-info{
-      h1{
-      text-align: left;
+    .card-trip-info {
+      h1 {
+        text-align: left;
       }
-      .member-going{
+      .member-going {
         text-align: left;
       }
     }

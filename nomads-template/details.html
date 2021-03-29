@@ -103,10 +103,12 @@
         </div>
       </section>
 
+      <!-- Card Main -->
       <section class="section-details-content">
         <div class="container">
           <div class="row">
             <div class="col-lg-8 p-lg-0">
+              <!-- Card Details (Bagian Kiri) -->
               <div class="card card-details p-4">
                 <div class="card-details-content">
                   <h1>Nusa Penida</h1>
@@ -212,26 +214,41 @@
               </div>
             </div>
             <div class="col-lg-4">
+              <!-- Card-Trip-Info (Bagian Kanan) -->
               <card class="card card-trip-info p-4">
                 <div class="card-trip-info-content">
                   <h1>Members are going</h1>
                   <div class="member-going">
-                    <img src="/frontend/images/member_1.png">
-                    <img src="/frontend/images/member_2.png">
-                    <img src="/frontend/images/member_3.png">
-                    <img src="/frontend/images/member_5.png">
+                    <img src="/frontend/images/member_1.png" />
+                    <img src="/frontend/images/member_2.png" />
+                    <img src="/frontend/images/member_3.png" />
+                    <img src="/frontend/images/member_5.png" />
                   </div>
-                  <hr>
-                  <h1>Trip Information</h1>
-                  <p>Date of Departure <span>22 Aug 2019</span></p>
-                  <p>Duration <span>4D 3N</span></p>
-                  <p>Type of Trip <span>Open Trip</span></p>
-                  <p>Price <span>$80,00 / person</span></p>
-                </div>
-                <div class="btn-container">
-                  <a href="#" class="btn btn-primary">Join Now</a>
+                  <hr />
+                  <h1 class="mb-3">Trip Information</h1>
+                  <table width="100%" class="trip-information">
+                    <tr>
+                      <th width="50%">Date of Departure</th>
+                      <td width="50%" class="text-right">22 Aug 2021</td>
+                    </tr>
+                    <tr>
+                      <th width="50%">Duration</th>
+                      <td width="50%" class="text-right">4D 3N</td>
+                    </tr>
+                    <tr>
+                      <th width="50%">Type of Trip</th>
+                      <td width="50%" class="text-right">Open Trip</td>
+                    </tr>
+                    <tr>
+                      <th width="50%">Price</th>
+                      <td width="50%" class="text-right">$80,00 / person</td>
+                    </tr>
+                  </table>
                 </div>
               </card>
+              <div class="btn-container">
+                <a href="checkout.html" class="btn btn-primary btn-join">Join Now</a>
+              </div>
             </div>
           </div>
         </div>

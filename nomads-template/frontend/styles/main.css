@@ -351,6 +351,8 @@ body {
 
 .section-details-content .card-trip-info {
   border-radius: 11px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .section-details-content .card-trip-info h1 {
@@ -371,23 +373,209 @@ body {
   margin: 20px 0;
 }
 
-.section-details-content .card-trip-info p {
+.section-details-content .card-trip-info .trip-information th {
   font-size: 18px;
   font-weight: 300;
 }
 
-.section-details-content .card-trip-info p span {
-  float: right;
+.section-details-content .card-trip-info .trip-information td {
+  font-size: 18px;
+  color: #b1b1b1;
+  font-weight: 300;
+}
+
+.section-details-content .btn-container {
+  margin: 0;
+}
+
+.section-details-content .btn-container .btn-join {
+  border-radius: 0;
+  width: 100%;
+}
+
+.section-checkout-content {
+  margin-top: 10px;
+  min-height: 100vh;
+}
+
+.section-checkout-content .card-checkout {
+  border-radius: 11px;
+}
+
+.section-checkout-content .card-checkout h1,
+.section-checkout-content .card-checkout h2,
+.section-checkout-content .card-checkout h3 {
+  font-weight: 600;
+}
+
+.section-checkout-content .card-checkout h1 {
+  font-size: 26px;
+}
+
+.section-checkout-content .card-checkout h2 {
+  font-size: 20px;
+}
+
+.section-checkout-content .card-checkout h3 {
+  font-size: 14px;
+}
+
+.section-checkout-content .card-checkout p {
+  color: #b1b1b1;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.section-checkout-content .card-checkout p.disclaimer {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.section-checkout-content .card-checkout .attendee th,
+.section-checkout-content .card-checkout .attendee td {
+  color: #071c4d;
+  font-size: 18px;
+}
+
+.section-checkout-content .card-checkout .attendee th {
+  font-weight: 300;
+  border-top: 0;
+}
+
+.section-checkout-content .card-checkout .add-member .gj-datepicker .datepicker {
+  border-right: 0;
+}
+
+.section-checkout-content .card-checkout .add-member .gj-datepicker .input-group-append .btn {
+  padding: 0;
+  padding-bottom: 5px;
+}
+
+.section-checkout-content .card-checkout .add-member .btn-add-now {
+  width: 130px;
+  border-color: #071c4d;
+  background-color: #071c4d;
+}
+
+.section-checkout-content .card-checkout .add-member .btn-add-now:hover {
+  background-color: #0c2b72;
+  border-color: #0c2b72;
+}
+
+.section-checkout-content .card-checkout-info {
+  border-radius: 11px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.section-checkout-content .card-checkout-info h1 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-checkout-content .card-checkout-info hr {
+  margin: 20px 0;
+}
+
+.section-checkout-content .card-checkout-info .checkout-information th {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.section-checkout-content .card-checkout-info .checkout-information td {
+  font-size: 18px;
+  color: #b1b1b1;
+  font-weight: 300;
+}
+
+.section-checkout-content .card-checkout-info .checkout-information .total {
+  color: #071c4d;
+  font-weight: 600;
+}
+
+.section-checkout-content .card-checkout-info .checkout-information .total span {
+  color: #da4e4e;
+}
+
+.section-checkout-content .card-checkout-info .instruction-note {
+  font-size: 14px;
+  font-weight: 300;
   color: #b1b1b1;
 }
 
-.section-details-content .card-trip-info .btn-container {
-  margin: 15px -24px -24px;
+.section-checkout-content .card-checkout-info .bank .bank-item h3,
+.section-checkout-content .card-checkout-info .bank .bank-item p {
+  font-size: 16px;
 }
 
-.section-details-content .card-trip-info .btn-container .btn-primary {
+.section-checkout-content .card-checkout-info .bank .bank-item h3 {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.section-checkout-content .card-checkout-info .bank .bank-item p {
+  margin-bottom: 0;
+}
+
+.section-checkout-content .card-checkout-info .bank .bank-item .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+
+.section-checkout-content .card-checkout-info .bank .bank-item .bank-img {
+  float: left;
+}
+
+.section-checkout-content .btn-container {
+  color: #071c4d;
+  margin: 0;
+}
+
+.section-checkout-content .btn-container .btn-payment {
   border-radius: 0;
   width: 100%;
+}
+
+.section-checkout-content .btn-cancel-container {
+  margin-top: 20px;
+}
+
+.section-checkout-content .btn-cancel-container .btn-cancel {
+  font-size: 20px;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+
+.section-success-content {
+  height: 90vh;
+}
+
+.section-success-content .img-success {
+  margin-top: 100px;
+}
+
+.section-success-content h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.section-success-content p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+
+.section-success-content .btn-backhome {
+  margin-top: 35px;
+  border-color: #071c4d;
+  background-color: #071c4d;
+}
+
+.section-success-content .btn-backhome:hover {
+  background-color: #0c2b72;
+  border-color: #0c2b72;
 }
 
 .btn-primary {
@@ -402,6 +590,11 @@ body {
 .btn-primary:hover {
   background-color: #ffa25c;
   border-color: #ffa25c;
+}
+
+.btn-primary:active {
+  background-color: #ffa25c !important;
+  border-color: #ffa25c !important;
 }
 
 .btn-need-help {
@@ -487,10 +680,12 @@ body {
     font-size: 18px;
     line-height: 34px;
   }
-  .section-details-content .card-details h1, .section-details-content .card-details p {
+  .section-details-content .card-details h1,
+  .section-details-content .card-details p {
     text-align: left;
   }
-  .section-details-content .card-details h1.location, .section-details-content .card-details p.location {
+  .section-details-content .card-details h1.location,
+  .section-details-content .card-details p.location {
     text-align: left;
   }
   .section-details-content .card-details .gallery .xzoom-thumbnails a img {
