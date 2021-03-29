@@ -237,6 +237,159 @@ body {
   line-height: 34px;
 }
 
+.section-details-header {
+  min-height: 310px;
+  background-color: #e4e6eb;
+  margin-top: -70px;
+}
+
+.section-details-breadcrumb {
+  margin-top: -210px;
+}
+
+.section-details-breadcrumb .breadcrumb {
+  background: transparent;
+}
+
+.section-details-breadcrumb .breadcrumb .breadcrumb-item {
+  color: #071c4d;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.section-details-breadcrumb .breadcrumb .breadcrumb-item.active {
+  font-weight: 600;
+}
+
+.section-details-content {
+  margin-top: 10px;
+  min-height: 100vh;
+}
+
+.section-details-content .card-details {
+  border-radius: 11px;
+}
+
+.section-details-content .card-details h1,
+.section-details-content .card-details h2 {
+  font-weight: 600;
+}
+
+.section-details-content .card-details h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.section-details-content .card-details h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.section-details-content .card-details p {
+  font-size: 18px;
+  font-weight: 300;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-details p.location {
+  text-align: center;
+}
+
+.section-details-content .card-details .gallery .xzoom-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.section-details-content .card-details .gallery .xzoom-container .xzoom {
+  width: 100%;
+}
+
+.section-details-content .card-details .gallery .xzoom-container .xactive {
+  border: 4px solid #1abc9c;
+}
+
+.section-details-content .card-details .gallery .xzoom-thumbnails {
+  text-align: center;
+  padding: 0 15px;
+  margin: 0 0 30px 0;
+}
+
+.section-details-content .card-details .gallery .xzoom-thumbnails a img {
+  margin: 10px 7px 10px;
+}
+
+.section-details-content .card-details .features {
+  margin-top: 24px;
+}
+
+.section-details-content .card-details .features h3,
+.section-details-content .card-details .features p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.section-details-content .card-details .features h3 {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section-details-content .card-details .features .description {
+  margin-left: 14px;
+  overflow: hidden;
+  float: left;
+  margin-left: 12px;
+}
+
+.section-details-content .card-details .features .features-image {
+  float: left;
+  width: 45px;
+  height: 45px;
+}
+
+.section-details-content .card-trip-info {
+  border-radius: 11px;
+}
+
+.section-details-content .card-trip-info h1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.section-details-content .card-trip-info .member-going {
+  text-align: center;
+}
+
+.section-details-content .card-trip-info .member-going img {
+  margin: 5px 8px 5px 0;
+}
+
+.section-details-content .card-trip-info hr {
+  margin: 20px 0;
+}
+
+.section-details-content .card-trip-info p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.section-details-content .card-trip-info p span {
+  float: right;
+  color: #b1b1b1;
+}
+
+.section-details-content .card-trip-info .btn-container {
+  margin: 15px -24px -24px;
+}
+
+.section-details-content .card-trip-info .btn-container .btn-primary {
+  border-radius: 0;
+  width: 100%;
+}
+
 .btn-primary {
   background-color: #ff9543;
   border-color: #ff9543;
@@ -333,6 +486,28 @@ body {
     color: #071c4d;
     font-size: 18px;
     line-height: 34px;
+  }
+  .section-details-content .card-details h1, .section-details-content .card-details p {
+    text-align: left;
+  }
+  .section-details-content .card-details h1.location, .section-details-content .card-details p.location {
+    text-align: left;
+  }
+  .section-details-content .card-details .gallery .xzoom-thumbnails a img {
+    width: 18%;
+    margin: 10px 7px 10px;
+  }
+  .section-details-content .card-details .gallery .xzoom-thumbnails a img.first {
+    margin: 0;
+  }
+  .section-details-content .card-details .gallery .xzoom-thumbnails a img.last {
+    margin: 0;
+  }
+  .section-details-content .card-trip-info h1 {
+    text-align: left;
+  }
+  .section-details-content .card-trip-info .member-going {
+    text-align: left;
   }
 }
 /*# sourceMappingURL=main.css.map */
