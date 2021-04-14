@@ -1,0 +1,7 @@
+GUEST
+naufalz/coba@email.com
+123fgh78
+
+ADMIN
+zufar/admin@coba.com
+123fgh78
