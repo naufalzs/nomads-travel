@@ -17,7 +17,7 @@
                         You will see beautiful <br />
                         moment that you never see before
                     </p>
-                    <a href="{{ route('detail') }}" class="btn btn-primary">Get Started</a>
+                    <a href="#popular" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -65,42 +65,19 @@
         <section class="section-popular-content" id="popularContent">
             <div class="container">
                 <div class="row justify-content-center">
+                    @foreach ($items as $item)
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="text-center d-flex flex-column card-travel card-1">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">DERATAN, BALI</div>
+                        <div class="text-center d-flex flex-column card-travel card-1"
+                        style="background-image: url({{ $item->galleries->count() ? Storage::url($item->galleries->first()->image) : '' }})"
+                        >
+                            <div class="travel-country">{{ $item->location }}</div>
+                            <div class="travel-location">{{ $item->title }}</div>
                             <div class="mt-auto travel-button">
-                                <a href="{{ route('detail') }}" class="btn btn-primary px-4">View Details</a>
+                                <a href="{{ route('detail', $item->slug) }}" class="btn btn-primary px-4">View Details</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="text-center d-flex flex-column card-travel card-2">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">BROMO</div>
-                            <div class="mt-auto travel-button">
-                                <a href="{{ route('detail') }}" class="btn btn-primary px-4">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="text-center d-flex flex-column card-travel card-3">
-                            <div class="travel-country">INDONESIA</div>
-                            <div class="travel-location">NUSA PENIDA</div>
-                            <div class="mt-auto travel-button">
-                                <a href="{{ route('detail') }}" class="btn btn-primary px-4">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="text-center d-flex flex-column card-travel card-4">
-                            <div class="travel-country">MIDDLE EAST</div>
-                            <div class="travel-location">DUBAI</div>
-                            <div class="mt-auto travel-button">
-                                <a href="{{ route('detail') }}" class="btn btn-primary px-4">View Details</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -193,7 +170,7 @@
                         <a href="#" class="btn btn-need-help px-4 mt-4 mx-1">
                             I Need Help
                         </a>
-                        <a href="{{ route('detail') }}" class="btn btn-primary px-4 mt-4 mx-1">
+                        <a href="{{ route('register') }}" class="btn btn-primary px-4 mt-4 mx-1">
                             Get Started
                         </a>
                     </div>

@@ -30,7 +30,7 @@
                                 <tr>
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->travel_package->title }}</td>
-                                    <td><img src="{{ Storage::url($item->image) }}" alt="" style="width: 150px"
+                                    <td><img src="{{ Storage::url($item->image) }}" style="width: 150px; height: 150px"
                                             class="img-thumbnail"></td>
                                     <td>
                                         <div class="text-center">

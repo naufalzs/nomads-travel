@@ -30,50 +30,27 @@
                         <!-- Card Details (Bagian Kiri) -->
                         <div class="card card-details p-4">
                             <div class="card-details-content">
-                                <h1>Nusa Penida</h1>
-                                <p class="mb-4 location">Bali, Indonesia</p>
+                                <h1>{{ $item->title }}</h1>
+                                <p class="mb-4 location">{{ $item->location }}</p>
+                                @if ($item->galleries->count())
                                 <div class="gallery">
                                     <div class="xzoom-container container-fluid">
-                                        <img src="{{ asset('/frontend/images/pic 1.jpg') }}" class="xzoom img-fluid"
-                                            id="main_image" xoriginal="{{ asset('/frontend/images/pic 1.jpg') }}" />
+                                        <img src="{{ Storage::url($item->galleries->first()->image) }}" class="xzoom img-fluid"
+                                            id="main_image" xoriginal="{{ Storage::url($item->galleries->first()->image) }}" />
                                     </div>
                                     <div class="xzoom-thumbnails container-fluid">
-                                        <a href="{{ asset('/frontend/images/pic 1.jpg') }}">
-                                            <img src="{{ asset('/frontend/images/pic 1.jpg') }}"
+                                        @foreach($item->galleries as $gallery)
+                                        <a href="{{ Storage::url($gallery->image) }}">
+                                            <img src="{{ Storage::url($gallery->image) }}"
                                                 class="xzoom-gallery img-fluid first"
-                                                xpreview="{{ asset('/frontend/images/pic 1.jpg') }}" width="150" /></a>
-                                        <a href="{{ asset('/frontend/images/pic 2.jpg') }}">
-                                            <img src="{{ asset('/frontend/images/pic 2.jpg') }}"
-                                                class="xzoom-gallery img-fluid"
-                                                xpreview="{{ asset('/frontend/images/pic 2.jpg') }}" width="150" /></a>
-                                        <a href="{{ asset('/frontend/images/pic 3.jpg') }}">
-                                            <img src="{{ asset('/frontend/images/pic 3.jpg') }}"
-                                                class="xzoom-gallery img-fluid"
-                                                xpreview="{{ asset('/frontend/images/pic 3.jpg') }}" width="150" /></a>
-                                        <a href="{{ asset('/frontend/images/pic 4.jpg') }}">
-                                            <img src="{{ asset('/frontend/images/pic 4.jpg') }}"
-                                                class="xzoom-gallery img-fluid"
-                                                xpreview="{{ asset('/frontend/images/pic 4.jpg') }}" width="150" /></a>
-                                        <a href="{{ asset('/frontend/images/pic 5.jpg') }}">
-                                            <img src="{{ asset('/frontend/images/pic 5.jpg') }}"
-                                                class="xzoom-gallery img-fluid last"
-                                                xpreview="{{ asset('/frontend/images/pic 5.jpg') }}" width="150" /></a>
+                                                xpreview="{{ Storage::url($gallery->image) }}" width="150" /></a>
+                                        @endforeach
                                     </div>
                                 </div>
+                                @endif
                                 <h2>Tentang Wisata</h2>
                                 <p>
-                                    Nusa Penida is an island southeast of Indonesia's island
-                                    Bali and a district of Klungkung Regency that includes the
-                                    neighbouring small island of Nusa Lembongan. The Badung
-                                    Strait separates the island and Bali. The interior of Nusa
-                                    Penida is hilly with a maximum altitude of 524 metres. It is
-                                    drier than the nearby island of Bali. There is very little
-                                    tourist infrastructure
-                                </p>
-                                <p>
-                                    Bali and a district of Klungkung Regency that includes the
-                                    neighbouring small island of Nusa Lembongan. The Badung
-                                    Strait separates the island and Bali
+                                    {{ $item->about }}
                                 </p>
                                 <div class="features row">
                                     <div class="col-md-4 border-right">
@@ -81,7 +58,7 @@
                                             class="features-image" />
                                         <div class="description">
                                             <h3>Featured Event</h3>
-                                            <p>Tari Kecak</p>
+                                            <p>{{ $item->featured_event }}</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4 border-right">
@@ -89,7 +66,7 @@
                                             class="features-image" />
                                         <div class="description">
                                             <h3>Language</h3>
-                                            <p>Bahasa Indonesia</p>
+                                            <p>{{ $item->language }}</p>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -97,7 +74,7 @@
                                             class="features-image" />
                                         <div class="description">
                                             <h3>Foods</h3>
-                                            <p>Sate Lilit Ikan</p>
+                                            <p>{{ $item->foods }}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -120,26 +97,37 @@
                                 <table width="100%" class="trip-information">
                                     <tr>
                                         <th width="50%">Date of Departure</th>
-                                        <td width="50%" class="text-right">22 Aug 2021</td>
+                                        <td width="50%" class="text-right">{{\Carbon\Carbon::create($item->departure_date)->format('F n, Y')}}</td>
                                     </tr>
                                     <tr>
                                         <th width="50%">Duration</th>
-                                        <td width="50%" class="text-right">4D 3N</td>
+                                        <td width="50%" class="text-right">{{ $item->duration }}</td>
                                     </tr>
                                     <tr>
                                         <th width="50%">Type of Trip</th>
-                                        <td width="50%" class="text-right">Open Trip</td>
+                                        <td width="50%" class="text-right">{{ $item->type }}</td>
                                     </tr>
                                     <tr>
                                         <th width="50%">Price</th>
-                                        <td width="50%" class="text-right">$80,00 / person</td>
+                                        <td width="50%" class="text-right">${{ $item->price }},00 / person</td>
                                     </tr>
                                 </table>
                             </div>
                         </card>
+                        @auth
+                        <form action="{{ route('checkout-process',$item->id) }}" method="POST">
+                            @csrf
+                            <div class="btn-container">
+                                <button type="submit" class="btn btn-primary btn-join">Join Now</button>
+                            </div> 
+                        </form>
+                        @endauth
+                        @guest
                         <div class="btn-container">
-                            <a href="{{ route('checkout') }}" class="btn btn-primary btn-join">Join Now</a>
-                        </div>
+                            <a href="{{ route('login') }}" class="btn btn-primary btn-join">Login or Register to Join</a>
+                        </div>  
+                        @endguest
+                        
                     </div>
                 </div>
             </div>

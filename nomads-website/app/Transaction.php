@@ -15,11 +15,18 @@ class Transaction extends Model
 
     protected $hidden = [];
 
+    // public $incrementing = false;
+
+    // ini relasi yang dipanggil pake with
+
+    // kalau hasMany berarti adanya di tabel relasinya
     public function details()
     {
         return $this->hasMany(TransactionDetail::class, 'transactions_id', 'id');
     }
 
+
+    // kalau belong to berarti ada tabelnya
     public function travel_package()
     {
         return $this->belongsTo(TravelPackage::class, 'travel_packages_id', 'id');
